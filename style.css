@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 16px;
+}
+
+.container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 540px;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 24px;
+  color: #1a1a2e;
+}
+
+/* ── Input section ── */
+.input-section { margin-bottom: 24px; }
+
+label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+/* KEY: flexbox makes input stretch, button stay fixed */
+.input-row {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="text"] {
+  flex: 1;          /* grows to fill available space */
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+input[type="text"]:focus { border-color: #0ea5e9; }
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+button:hover  { opacity: 0.88; }
+button:active { transform: scale(0.97); }
+
+#add-btn   { background: #0ea5e9; color: white; white-space: nowrap; }
+#clear-btn { background: #e5e7eb; color: #374151; margin-top: 16px; width: 100%; }
+
+.error {
+  color: #dc2626;
+  font-size: 0.8rem;
+  margin-top: 6px;
+  min-height: 18px;  /* prevents layout shift when error appears/disappears */
+}
+
+/* ── Idea cards ── */
+.idea-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: #fafafa;
+}
+
+.idea-card span { flex: 1; font-size: 0.9rem; color: #374151; }
+
+.idea-card button {
+  padding: 4px 8px;
+  background: transparent;
+  color: #9ca3af;
+  font-size: 0.8rem;
+  font-weight: 400;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  width: auto;
+}
+
+.idea-card button:hover { color: #dc2626; border-color: #fca5a5; }
+
+.empty {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  padding: 32px 0;
+}
