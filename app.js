@@ -1,7 +1,7 @@
 // Day 2: replaced all onclick attributes with addEventListener
 // Compared to Day 1: no global functions called from HTML, DOMContentLoaded wrapper,
 // input validation with error messages, safe rendering via escapeHtml()
-
+//I have to redo all of my commits please pay no mind to this
 const ideas = [];
 
 document.addEventListener('DOMContentLoaded', () => {
