@@ -65,6 +65,19 @@ export function getFilteredTasks() {
   return tasks;
 }
 
+export function getStats() {
+  const tasks = loadTasks();
+  const completed = tasks.filter(t => t.completed).length;
+  return { total: tasks.length, completed, active: tasks.length - completed };
+}
+
+export function clearCompleted() {
+  const tasks = loadTasks();
+  const updated = tasks.filter(t => !t.completed);
+  saveTasks(updated);
+  return updated;
+}
+
 
 
 // saveTasks([
